@@ -46,17 +46,17 @@ class Home : Fragment() {
         }
 
         btnCreateAccount.setOnClickListener {
-            showPopup("Crear cuenta", "Esta funcionaliodad no está en el alcance")
+            showPopup()
         }
 
         return view
     }
 
-    private fun showPopup(title: String, message: String) {
+    private fun showPopup() {
 
         val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle(title)
-        builder.setMessage(message)
+        builder.setTitle("Crear cuenta")
+        builder.setMessage("Esta funcionalidad no está en el alcance")
 
         builder.setPositiveButton("Cerrar") { dialog, _ -> dialog.dismiss() }
 
