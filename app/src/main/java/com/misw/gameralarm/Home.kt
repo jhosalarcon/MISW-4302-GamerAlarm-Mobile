@@ -37,8 +37,14 @@ class Home : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val buttonNavigate = view.findViewById<Button>(R.id.button_navigate)
-        buttonNavigate.setOnClickListener {
+        val btnLogin: Button = view.findViewById(R.id.btnLogin)
+        val btnCreateAccount: Button = view.findViewById(R.id.btnCreateAccount)
+
+        btnLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_home_to_dashboard)
+        }
+
+        btnCreateAccount.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_dashboard)
         }
 
