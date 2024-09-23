@@ -27,5 +27,7 @@
     <action
         android:id="@+id/action_home_to_dashboard"
         app:destination="@id/dashboard" />
-
+    <action
+        android:id="@+id/action_dashboard_to_recompensas"
+        app:destination="@id/recompensas" />
 </navigation>

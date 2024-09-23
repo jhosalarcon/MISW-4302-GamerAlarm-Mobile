@@ -5,9 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
+import androidx.navigation.fragment.findNavController
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -17,7 +18,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Dashboard : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -33,20 +34,50 @@ class Dashboard : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        val btnPerfil: Button = view.findViewById(R.id.btnPerfil)
+        val btnHistorial: Button = view.findViewById(R.id.btnHistorial)
+        val btnAlarmasActivas: Button = view.findViewById(R.id.btnAlarmasActivas)
+        val btnRecompensas: Button = view.findViewById(R.id.btnRecompensas)
+        val btnCrearAlarma: Button = view.findViewById(R.id.btnCrearAlarma)
+
+        btnRecompensas.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboard_to_recompensas)
+        }
+
+        btnHistorial.setOnClickListener {
+            showPopup("Historial alarmas", "Esta funcionalidad no está en el alcance")
+        }
+
+        btnCrearAlarma.setOnClickListener {
+            showPopup("Crear alarma", "Esta funcionalidad no está en el alcance")
+        }
+
+        btnAlarmasActivas.setOnClickListener {
+            showPopup("Alarmas activas", "Esta funcionalidad no está en el alcance")
+        }
+
+        btnPerfil.setOnClickListener {
+            showPopup("Mi perfil", "Esta funcionalidad no está en el alcance")
+        }
+
+        return view
+    }
+
+    private fun showPopup(title: String, message: String) {
+
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(title)
+        builder.setMessage(message)
+
+        builder.setPositiveButton("Cerrar") { dialog, _ -> dialog.dismiss() }
+
+        val dialog = builder.create()
+        dialog.show()
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Dashboard.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Dashboard().apply {
