@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import androidx.appcompat.app.AlertDialog
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,10 +46,22 @@ class Home : Fragment() {
         }
 
         btnCreateAccount.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_dashboard)
+            showPopup("Crear cuenta", "Esta funcionaliodad no está en el alcance")
         }
 
         return view
+    }
+
+    private fun showPopup(title: String, message: String) {
+
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(title)
+        builder.setMessage(message)
+
+        builder.setPositiveButton("Cerrar") { dialog, _ -> dialog.dismiss() }
+
+        val dialog = builder.create()
+        dialog.show()
     }
 
     companion object {
