@@ -78,64 +78,102 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="32dp">
 
-        <!-- Trofeo N1 -->
         <LinearLayout
+            android:id="@+id/Trofeo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/trophy_24px" />
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/circular_button" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/trophy_white" />
+            </FrameLayout>
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Trofeo N1"
-                android:textColor="@android:color/white"
+                android:textColor="@color/white"
                 android:textSize="38sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Trofeo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/trophy_white" />
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/circular_button_small_gray" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/trophy_24px" />
+            </FrameLayout>
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Trofeo N2"
-                android:textColor="@android:color/white"
+                android:textColor="@color/black"
                 android:textSize="38sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Trofeo3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/trophy_white" />
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/circular_button_small_gray" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/trophy_24px" />
+            </FrameLayout>
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Trofeo N3"
-                android:textColor="@android:color/white"
+                android:textColor="@color/black"
                 android:textSize="38sp" />
         </LinearLayout>
     </LinearLayout>
