@@ -10,7 +10,7 @@ Bienvenido a la **Gamer Alarm App**, una aplicación Android diseñada para game
 ## Instrucciones para descargar e instalar el APK
 
 ### 1. Accede al Repositorio
-1. Ve al repositorio de la aplicación en GitHub utilizando el siguiente enlace: [Gamer Alarm GitHub Repo](https://github.com/jhosalarcon/MISW-4302-GamerAlarm-Mobile).
+Ve al repositorio de la aplicación en GitHub utilizando el siguiente enlace: [Gamer Alarm GitHub Repo](https://github.com/jhosalarcon/MISW-4302-GamerAlarm-Mobile).
 
 ### 2. Descargar el APK
 1. En la página principal del repositorio, busca el archivo **`GamerAlarm.apk`** que se encuentra en la raíz del proyecto.
@@ -28,7 +28,7 @@ Bienvenido a la **Gamer Alarm App**, una aplicación Android diseñada para game
 3. Espera unos segundos hasta que la instalación se complete.
 
 ### 5. Abrir la Aplicación
-1. Una vez instalada, puedes abrir la aplicación directamente desde la pantalla de instalación haciendo clic en **Abrir** o desde el cajón de aplicaciones de tu dispositivo.
+Una vez instalada, puedes abrir la aplicación directamente desde la pantalla de instalación haciendo clic en **Abrir** o desde el cajón de aplicaciones de tu dispositivo.
 
 ## Características de la App
 
