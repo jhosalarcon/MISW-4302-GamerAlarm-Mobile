@@ -12,13 +12,11 @@
         android:id="@+id/tvTienes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="36dp"
         android:text="Tienes"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        app:layout_constraintMarginStart="32dp"
-        app:layout_constraintMarginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,13 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="850"
         android:textColor="@android:color/white"
         android:textSize="74sp"
         android:textStyle="bold"
-        app:layout_constraintMarginStart="32dp"
-        app:layout_constraintMarginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTienes" />
 
@@ -41,11 +37,11 @@
         android:id="@+id/tvTextoPuntos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="268dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="12dp"
         android:text="puntos"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:layout_constraintMarginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPuntos" />
 
@@ -53,48 +49,41 @@
         android:id="@+id/lineaSeparadora"
         android:layout_width="350dp"
         android:layout_height="1dp"
-        android:layout_marginTop="44dp"
         android:background="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintMarginEnd="32dp"
-        app:layout_constraintMarginStart="32dp"
-        app:layout_constraintMarginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTextoPuntos" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextoPuntos"
+        android:layout_marginTop="24dp" />
 
     <TextView
         android:id="@+id/tvCatalogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="30dp"
         android:text="Catálogo"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintMarginStart="32dp"
-        app:layout_constraintMarginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lineaSeparadora" />
+        app:layout_constraintTop_toBottomOf="@+id/lineaSeparadora"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp" />
 
     <LinearLayout
         android:id="@+id/llTrofeos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
         android:orientation="vertical"
-        app:layout_constraintMarginStart="32dp"
-        app:layout_constraintMarginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCatalogo">
+        app:layout_constraintTop_toBottomOf="@+id/tvCatalogo"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp">
 
+        <!-- Trofeo N1 -->
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:layout_width="80dp"
@@ -111,10 +100,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:layout_width="80dp"
@@ -131,10 +120,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:layout_width="80dp"
@@ -149,7 +138,6 @@
                 android:textColor="@android:color/white"
                 android:textSize="38sp" />
         </LinearLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
