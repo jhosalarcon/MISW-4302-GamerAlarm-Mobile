@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -38,6 +39,7 @@ class ReclamarRecompensas : Fragment() {
         val trofeo1: LinearLayout = view.findViewById(R.id.Trofeo1)
         val trofeo2: LinearLayout = view.findViewById(R.id.Trofeo2)
         val trofeo3: LinearLayout = view.findViewById(R.id.Trofeo3)
+        val btnBack: ImageButton = view.findViewById(R.id.btnBack)
 
         trofeo1.setOnClickListener {
             showPopup("Trofeo N1", "¡¡Este trofeo ya es tuyo!!")
@@ -49,6 +51,10 @@ class ReclamarRecompensas : Fragment() {
 
         trofeo3.setOnClickListener {
             showPopup("Trofeo N3", "Aún te falta llegar a 1.500 puntos para obtener este trofeo. ¡¡Falta poco!!")
+        }
+
+        btnBack.setOnClickListener {
+            findNavController().navigateUp()
         }
         return view
     }
