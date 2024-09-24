@@ -1,23 +1,22 @@
 package com.misw.gameralarm
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Recompensas.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Recompensas : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -33,20 +32,48 @@ class Recompensas : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recompensas, container, false)
+        val view = inflater.inflate(R.layout.fragment_recompensas, container, false)
+
+        val btnCatalogo: Button = view.findViewById(R.id.btnCatalogo)
+        val progressBar: ProgressBar = view.findViewById(R.id.progressBar)
+        val tvObtenerPuntos: TextView = view.findViewById(R.id.tvObtenerPuntos)
+
+        val content = SpannableString("¿Cómo obtener puntos?")
+        content.setSpan(UnderlineSpan(), 0, content.length, 0)
+        tvObtenerPuntos.setText(content)
+
+        btnCatalogo.setOnClickListener {
+            findNavController().navigate(R.id.action_recompensas_to_reclamar)
+        }
+
+        progressBar.setOnClickListener {
+            findNavController().navigate(R.id.action_recompensas_to_reclamar)
+        }
+
+        tvObtenerPuntos.setOnClickListener {
+            showPopup()
+        }
+
+        return view
+    }
+    private fun showPopup() {
+
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle("¿Cómo ganar puntos?")
+
+        val message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.\nLink "
+        val spannableMessage = SpannableString(message)
+
+        spannableMessage.setSpan(UnderlineSpan(), 184, 188, 0)
+        builder.setMessage(spannableMessage)
+
+        builder.setPositiveButton("Cerrar") { dialog, _ -> dialog.dismiss() }
+
+        val dialog = builder.create()
+        dialog.show()
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Recompensas.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Recompensas().apply {
