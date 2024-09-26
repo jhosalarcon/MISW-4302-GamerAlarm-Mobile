@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -48,6 +49,12 @@ class Recompensas : Fragment() {
 
         progressBar.setOnClickListener {
             findNavController().navigate(R.id.action_recompensas_to_reclamar)
+        }
+
+        val btnBack: ImageButton = view.findViewById(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            findNavController().navigateUp()
         }
 
         tvObtenerPuntos.setOnClickListener {
