@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
 
@@ -60,6 +61,12 @@ class Dashboard : Fragment() {
 
         btnPerfil.setOnClickListener {
             showPopup("Mi perfil", "Esta funcionalidad no está en el alcance")
+        }
+
+        val btnBack: ImageButton = view.findViewById(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            findNavController().navigateUp()
         }
 
         return view
